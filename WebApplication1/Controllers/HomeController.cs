@@ -92,7 +92,7 @@ namespace WebApplication1.Controllers
                     annotation["mimetype"] = "text/plain";
                     service.Create(annotation);
                 }
-                RedirectToAction("About");
+                RedirectToAction("Index");
             }
             else
             {
