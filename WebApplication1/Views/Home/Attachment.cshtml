@@ -1,0 +1,22 @@
+﻿@model  IEnumerable<WebApplication1.Models.entityModel>
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+@using (Html.BeginForm("About", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    foreach (var item in Model)
+    {
+        <p><input type="checkbox" name="checkboxList" value=@item.Id />  @item.name</p>
+
+    }
+    <input type="file" name="upload" /><br>
+    <input type="submit" value="OK" />
+}
+<hr>
+
+
